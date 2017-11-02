@@ -1,0 +1,119 @@
+footer {
+    background-color: #333439
+}
+
+img {
+    vertical-align: middle;
+    border: 0
+}
+
+p {
+    padding: 0 0 10px
+}
+
+a {
+    cursor: pointer
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.social-icon {
+    padding: 60px 0 35px
+}
+
+.social-icon>ul {
+    text-align: center;
+    list-style: none;
+    margin-top: 0;
+    padding: 0
+}
+
+.social-icon>ul>li {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.social-icon>ul>li:hover a {
+    background-color: #6cb670;
+    transform: rotateY(0)
+}
+
+.social-icon>ul>li:hover a i {
+    color: #fff;
+    transform: rotateY(0)
+}
+
+.social-icon>ul>li>a {
+    background-color: #26292e;
+    display: block;
+    height: 70px;
+    width: 70px;
+    transform: rotateY(180deg);
+    transition: all .4s ease-out 0s;
+    text-decoration: none;
+    outline: 0
+}
+
+.social-icon>ul>li>a>i {
+    color: #55606a;
+    display: inline-block;
+    font-size: 32px;
+    line-height: 70px;
+    margin: 0;
+    opacity: .3;
+    transform: rotateY(180deg);
+    transition: all .4s ease-out 0s
+}
+
+header {
+    margin-bottom: 0
+}
+
+.copyright {
+    padding: 20px 0;
+    color: #fff
+}
+
+#myCarousel {
+    margin-bottom: 20px
+}
+
+.item img {
+    width: 100%
+}
+
+.marketing .col-lg-4 {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.marketing hr {
+    margin: 80px 0
+}
+
+.marketing .row {
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+.top {
+    cursor: pointer;
+    width: 70px;
+    height: 50px;
+    background-color: #6cb670;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    display: none
+}
+
+.top:hover {
+    opacity: .7
+}

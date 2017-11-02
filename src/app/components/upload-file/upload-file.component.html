@@ -1,0 +1,19 @@
+<div class="form-group clearfix" style="text-align:center">
+  <img class="userImg" src={{imgsrc}}>
+</div>
+<form class="form-horizontal" role="form" enctype="multipart/form-data" #form="ngForm" (ngSubmit)="submitFile()">
+  <div class="form-group">
+    <label for="realName" class="col-sm-offset-3 col-sm-1 control-label">选择头像</label>
+    <div class="col-sm-4">
+      <input id="photo" name="photo" type="file" id="file" ngModel (change)="getFiles($event)">
+    </div>
+    <!-- <div class="col-sm-3">
+      <button type="submit" class="btn btn-primary">保存</button>
+    </div> -->
+  </div>
+  <!-- <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">保存</button>
+    </div>
+  </div> -->
+</form>

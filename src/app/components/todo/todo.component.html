@@ -1,0 +1,28 @@
+<h1>
+  {{title}}
+  <!-- <ul>
+    <li *ngFor="let todo of todos">{{todo}}</li>
+  </ul> 
+*ngIf="todo.compelted";-->
+  <label>添加代办事项:</label>
+  <input #newtodo type="text">
+  <button type="button" (click)="addTodo(newtodo.value);
+          newtodo.value=''">添 加</button>
+  <ul>
+    <li *ngFor="let todo of todos;let index = index">
+      {{todo.title}}
+      <span [ngClass]='{compelted: todo.compelted}'>
+        <input type="button" (click)="removeTodo(index)" value="删除">
+      </span>
+    </li>
+  </ul>
+  <hr>
+  <input type="button" value="next" (click)="nextChoice()">
+  <!-- {{choice}} -->
+  <ul [ngSwitch]="choice">
+    <li *ngSwitchCase="1">First choice</li>
+    <li *ngSwitchCase="2">Second choice</li>
+    <li *ngSwitchCase="3">Third choice</li>
+    <!-- <li *ngSwitchDefaule>Defaule choice</li> -->
+  </ul>
+</h1>

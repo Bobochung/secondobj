@@ -1,0 +1,219 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+
+/*
+ * Global add-ons
+ */
+
+
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/*清楚浮动*/
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.col-sm-2 > input {
+  margin-right: 10px;
+}
+#example_b > thead {
+  display: none;
+}
+.blog_list_wrap {
+  background: #fff;
+  overflow: hidden;
+}
+.blog_list_wrap .blog_list {
+  padding: 30px 0;
+  border-bottom: solid 1px #e1ecef;
+}
+.blog_list_wrap .blog_list dt,
+.blog_list_wrap .blog_list dd {
+  vertical-align: middle;
+}
+.blog_list_wrap .blog_list dt {
+  width: 150px;
+  padding: 0 20px;
+  float: left;
+}
+.blog_list_wrap .blog_list dt a {
+  outline: none;
+  text-decoration: none;
+  color: #666;
+}
+.blog_list_wrap .blog_list dt .head {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+.blog_list_wrap .blog_list dt .nickname {
+  font-size: 12px;
+  color: #333;
+  display: inline-block;
+  width: 100%;
+  word-spacing: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+.blog_list_wrap .blog_list dd {
+  border-left: solid 1px #ecf1f3;
+  padding: 0 20px;
+}
+.blog_list_wrap .blog_list dd h3 {
+  margin: 0;
+  line-height: 24px;
+  padding-bottom: 10px;
+}
+.blog_list_wrap .blog_list dd h3 a {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+.blog_list_wrap .blog_list dd .blog_list_c {
+  font-size: 12px;
+  color: #888;
+}
+.blog_list_wrap .blog_list dd .blog_list_b {
+  padding-top: 30px;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_1 span {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 12px;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_1 span i {
+  color: #999;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_1 span a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #333;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_r {
+  float: right;
+  font-size: 12px;
+  color: #999;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_r label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_r span {
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+  font-family: '微软雅黑';
+  font-weight: normal;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_r span i {
+  margin-right: 5px;
+}
+.blog_list_wrap .blog_list dd .blog_list_b .blog_list_b_r span em {
+  color: #333;
+}
+.blog_list_wrap dl,
+.blog_list_wrap dt,
+.blog_list_wrap dd {
+  list-style: none;
+  margin: 0;
+  line-height: 24px;
+  font-family: '微软雅黑';
+  font-weight: normal;
+}
+.blog_list_wrap .fl,
+.blog_list_wrap .fr {
+  display: inline-block;
+}
