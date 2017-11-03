@@ -38,6 +38,9 @@
           <a [routerLink]="['/cms-list']" data-url='/home'>cms列表</a>
         </li>
         <li>
+          <a [routerLink]="['/test']" data-url='/home'>自定义指令测试</a>
+        </li>
+        <li>
           <a href="#/settings" class="dropdown-toggle" data-toggle="dropdown">应用
             <span class="caret"></span>
           </a>
@@ -71,7 +74,7 @@
               <a [routerLink]="['/profile']" class="active">个人中心</a>
             </li>
             <li>
-              <a href="/blog/list" class="active">我的博客</a>
+              <a class="active">我的博客</a>
             </li>
             <li id="signout">
               <a [routerLink]="['/home']" class="active" (click)="logOut()">

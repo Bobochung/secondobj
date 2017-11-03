@@ -1,0 +1,131 @@
+<section class="container">
+  <h1>自定义属性型指令测试</h1>
+  <h5 appRedBg>红色背景=======测试指令</h5>
+  <hr>
+  <hr>
+  <h1>自定义属性型指令测试(带参)</h1>
+  <h5 appRedBg> 红色背景色====你好</h5>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <h5 [appRedBg]="color"> ====选择上面的颜色改变背景色=====你好</h5>
+  <hr/>
+  <hr>
+  <h1>自定义结构指令</h1>
+  <p>
+    当前条件
+    <span [ngClass]="{ a: !condition, b: condition, unless: true }">{{condition}}dddddd</span>
+    <button (click)="condition = !condition" [ngClass]="{ a: condition, b: !condition }">
+      改变条件 {{condition ? 'false' : 'true'}}
+    </button>
+  </p>
+  <p *appStrucDirective="condition" class="unless a">
+    (A) 这段的条件是 false.
+  </p>
+
+  <p *appStrucDirective="!condition" class="unless b">
+    (B) 这段的条件是 true, 因unless被设为 false.
+  </p>
+  <hr/>
+  <h1>自定义类</h1>
+  <ul>
+    <li *ngFor="let user of users">
+      登录名:
+      <span>{{user.loginName}}</span>
+      <br> 邮箱:
+      <span>{{user.email}}</span>
+      <br> 年龄:
+      <span>{{user.age}}</span>
+      <br> 电话:
+      <span>{{user.phone}}</span>
+    </li>
+    <hr>
+  </ul>
+  <hr>
+  <h1>管道</h1>
+  <pre>
+      <ul>
+          <li>CurrencyPipe - {{ currencyValue | currency: 'USD' }}</li>
+          <li>DatePipe - {{ dateValue | date: 'shortTime' }}</li>
+          <li>DecimalPipe - {{ decimalValue | number: '3.1-2' }}</li>
+          <li>JsonPipe - {{ jsObject | json }}</li>
+          <li>LowerCasePipe - {{ uppercaseValue | lowercase }}</li>
+          <li>UpperCaseFilter - {{ lowercaseValue | uppercase }}</li>
+          <li>PercentPipe - {{ percentValue | percent: '2.1-2' }}</li>
+          <li>SlicePipe - {{ array | slice: 1: 2 }}</li>
+        </ul>
+  </pre>
+  <hr>
+  <h1>字符串截取</h1>
+  <pre>
+    <!-- // 截取第0个字符到第6个字符，即前四个字符 -->
+  <p>{{sliceString}}[0:6]: '{{sliceString | slice:0:6}}'</p>
+  
+    <!--// 截取字符串最后6个字符 -->
+    <p>{{sliceString}}[-6]: '{{sliceString | slice:-6}}'</p>
+  
+    <!--//从字符串倒数第6个字符开始截取，直至倒数第二个字符 -->
+    <p>{{sliceString}}[-6:-2]: '{{sliceString | slice:-6:-2}}'</p>
+  </pre>
+  <hr>
+  <h1>双向数据绑定</h1>
+  <label>Name: </label>
+  <input #name (keyup)="change(name.value)" type="text">
+  <p>In lowercase:</p>
+  <pre>'{{strValue | lowercase}}'</pre>
+  <p>In uppercase:</p>
+  <pre>'{{strValue | uppercase}}'</pre>
+  <hr>
+  <h1>对象转换json</h1>
+  <p>With JSON pipe:</p>
+  <pre>{{blog | json}}</pre>
+  <hr>
+  <h1>数字格式化</h1>
+  <p>e (no formatting): {{e}} </p>
+  <!--//整数最小有3位。小数最小有一位，最多有5位 -->
+  <p>
+    e (3.1-5): {{e | number:'3.1-5'}}
+  </p>
+  <p>
+    pi (no formatting): {{pi}}
+  </p>
+  <!--//整数最小3位，小数只能有5位-->
+  <p>
+    pi (3.5-5): {{pi | number:'3.5-5'}}
+  </p>
+  <hr>
+  <h1>数字格式化为百分比</h1>
+  <pre>
+      <p>p_pe (no formatting): {{p_pe}} </p>      
+      <p>p_pe (1.2-2): {{p_pe | percent:'1.2-2'}} </p>
+      <p>p_pi (no formatting): {{p_pi}} </p>      
+      <p>p_pi (1.2-2): {{p_pi | percent:'1.2-2'}} </p>
+  </pre>
+  <hr>
+  <h1>货币格式化</h1>
+  <pre>
+      <p>A: {{334.90 | currency:'USD':false}}</p>
+      <p>B: {{546346.89 | currency:'USD':true:'4.2-2'}}</p>
+      <p>{{ 123 | currency }}</p>
+  </pre>
+  <hr>
+  <h1>日期格式化</h1>
+  <pre>
+    <p>Today is {{today | date}}
+      <p>Or if you prefer, {{today | date:'fullDate'}}
+        <p>The time is {{today | date:'jmZ'}}
+          <p>{{ today | date:"y-MM-dd"}}
+            <p>{{ today | date:"mmss"}}
+              <p>{{ today | date:"y年MM月dd日HH时mm分ss秒"}}
+  </pre>
+  <hr>
+  <h1>自定义管道</h1>
+  <pre>
+    <p>{{popular | boolean: ['Yes']: ['No']}}</p>
+  </pre>
+  <hr>
+  <h1>带参路由</h1>
+  <a [routerLink]="['/blogdetail', 123]">测试用例</a>
+</section>

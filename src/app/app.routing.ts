@@ -10,6 +10,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { CmsListComponent } from './components/cms-list/cms-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TestComponent } from './components/test/test.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogDatailComponent } from './components/blog-datail/blog-datail.component';
 
 
 const AppRoutes: Routes = [
@@ -42,6 +45,18 @@ const AppRoutes: Routes = [
     {
         path: 'profile',
         component: ProfileComponent
+    },
+    {
+        path: 'test',
+        component: TestComponent
+    },
+    {
+        path: 'blog',
+        component: BlogComponent
+    },
+    {
+        path: 'blogdetail/:id',
+        component: BlogDatailComponent
     },
     {
         path: '**',

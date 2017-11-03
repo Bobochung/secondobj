@@ -55,7 +55,7 @@ export class UploadFileComponent implements OnInit {
       options.headers = headers;
       options.method = 'POST';
       let formData: FormData = new FormData();// 实例化表单对象
-      formData.append('photo', file, file.name);// 组装表单数据
+      formData.append('photoFile', file, file.name);// 组装表单数据
       console.log(this.authService.apiUrl + url);
       this.http.post(this.authService.apiUrl + url, formData, options)
         .subscribe((res: Response) => {

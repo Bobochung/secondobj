@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';//模板驱动型表单
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 declare var $: any;
 declare var validator: any;
@@ -12,7 +13,7 @@ declare var validator: any;
   providers: [AuthService]
 })
 export class ProfileComponent implements OnInit {
-  signUpForm: FormGroup;
+
   pictureUrl: string;
   profileForm: FormGroup;
   isFemale: string;
@@ -21,17 +22,16 @@ export class ProfileComponent implements OnInit {
   private fb: FormBuilder;
   private authService: AuthService;
   private http: Http;
-  constructor(fb: FormBuilder, authService: AuthService, http: Http) {
+  constructor(fb: FormBuilder, authService: AuthService, http: Http, private router: Router) {
     this.isFemale = '';
     this.isMale = '';
     this.fb = fb;
     this.authService = authService;
     this.http = http;
+
   }
 
-  ngOnInit() {
-    this.makeGet();
-  }
+
   makeGet() {
     let url = `${this.authService.apiUrl}/profile/${this.authService.getUser()}`;
     this.http.get(url).subscribe((res: Response) => {
@@ -99,10 +99,14 @@ export class ProfileComponent implements OnInit {
             break;
           }
           case 'SUCCESS': {
-            alert(res.json().msg);
+            this.router.navigate(['/profile']);
             break;
           }
         }
       });
+  }
+
+  ngOnInit() {
+    this.makeGet();
   }
 }

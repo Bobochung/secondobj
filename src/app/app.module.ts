@@ -24,14 +24,19 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { CmsListComponent } from './components/cms-list/cms-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
-// import { BlogComponent } from './components/blog/blog.component';
+import { RedBgDirective } from './diretives/red-bg.directive';
+import { BlogComponent } from './components/blog/blog.component';
+import { TestComponent } from './components/test/test.component';
+import { StrucDirectiveDirective } from './directives/struc-directive.directive';
+import { BooleanPipe } from './pipes/boolean.pipe';
+import { BlogDatailComponent } from './components/blog-datail/blog-datail.component';
 
 
 /**
  * @NgModule 表示一个注解/标注/装饰/修饰/宏定义
  * declarations: 声明(导入的自定义组件(包含Component的))
  * imports: 导入的相关模块(包含Module的)
- * 
+ * providers: 导入自定义服务
  * bootstrap: 启动组件
  */
 @NgModule({
@@ -51,7 +56,12 @@ import { UploadFileComponent } from './components/upload-file/upload-file.compon
     CmsListComponent,
     ProfileComponent,
     UploadFileComponent,
-    // BlogComponent
+    RedBgDirective,
+    BlogComponent,
+    TestComponent,
+    StrucDirectiveDirective,
+    BooleanPipe,
+    BlogDatailComponent,
   ],
   imports: [
     BrowserModule,
