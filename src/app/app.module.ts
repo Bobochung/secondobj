@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //模式表单
+import { Ng2SmartTableModule } from 'ng2-smart-table'
 /**
  * Components 一下相关组件
  */
@@ -68,7 +69,8 @@ import { BlogDatailComponent } from './components/blog-datail/blog-datail.compon
     AppRouting,
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SmartTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

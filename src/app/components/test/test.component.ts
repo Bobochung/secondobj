@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../classes/user';
 import { Employee } from '../../enums/employee.enum';
 import { Router } from '@angular/router';
-import { BooleanPipe } from '../../pipes/boolean.pipe'
+import { BooleanPipe } from '../../pipes/boolean.pipe';
 declare var $: any;
 
 @Component({
@@ -15,7 +15,7 @@ export class TestComponent implements OnInit {
   employee: string;
   index: number;
   private router: Router;
-
+  a:string;
   currencyValue: number;
   dateValue: Date;
   decimalValue: number;
@@ -40,7 +40,23 @@ export class TestComponent implements OnInit {
   p_pi: number = 0.31415926;
   p_pe: number = 0.08567897182818;
   today: number = Date.now();
-  popular: boolean[] =  [false];
+  popular: boolean[] = [false];
+  settings: any = {
+    columns: {
+      id: {
+        title: 'ID'
+      },
+      name: {
+        title: 'Full Name'
+      },
+      username: {
+        title: 'User Name'
+      },
+      email: {
+        title: 'Email'
+      }
+    }
+  };
   constructor(router: Router) {
     this.users = [
       new User('Assassin', '617637116@qq.com', 22, 15183389255),

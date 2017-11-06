@@ -16,16 +16,15 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     $(function () {
-      $('[data-url]').each(function () {
-        if ($(this).data('url') == location.pathname) {
-          $(this).parent().addClass('active');
-        } else {
-          // $(this).parent().removeClass('active');
-        }
-      });
+      $('#nav').find('li').each(function () {
+        $(this).on('click', function () {
+          $('#nav>li.active').removeClass('active');
+          $(this).addClass('active');
+        })
+      })
     })
   }
-  logOut(){
+  logOut() {
     localStorage.removeItem('username');
   }
 
