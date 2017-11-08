@@ -15,7 +15,7 @@ export class TestComponent implements OnInit {
   employee: string;
   index: number;
   private router: Router;
-  a:string;
+  a: string;
   currencyValue: number;
   dateValue: Date;
   decimalValue: number;
@@ -79,7 +79,9 @@ export class TestComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    $(function () {
+      $('#ull li').css('color', 'red');
+    })
   }
   tiaozhuan() {
     this.router.navigate['/home'];
